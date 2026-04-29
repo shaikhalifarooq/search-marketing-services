@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Search Marketing Services</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="topbar">🚀 Questions? Our team replies within 2 hours on business days</div>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Search<span>Marketing</span> Services</a>
+    <div class="nav-links">
+      <a href="features.html">Features</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html" style="color:var(--purple)">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <a href="contact.html" class="btn btn-outline">Login</a>
+      <a href="pricing.html" class="btn btn-primary">Get Started</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="container">
+    <span class="section-tag">Get in Touch</span>
+    <h1>We'd Love to <span style="color:var(--purple)">Hear From You</span></h1>
+    <p>Have a question, want a demo, or ready to scale your agency? Our team is here to help.</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="contact-grid">
+      <!-- Form -->
+      <div>
+        <h2 style="font-size:24px; font-weight:800; margin-bottom:8px;">Send Us a Message</h2>
+        <p style="color:var(--gray); font-size:14px; margin-bottom:32px;">Fill in the form and we'll get back to you within 2 business hours.</p>
+        <form onsubmit="submitForm(event)">
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" placeholder="John" required />
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" placeholder="Smith" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" placeholder="john@agency.com" required />
+          </div>
+          <div class="form-group">
+            <label>Company / Agency Name</label>
+            <input type="text" placeholder="Your Agency LLC" />
+          </div>
+          <div class="form-group">
+            <label>What brings you here?</label>
+            <select>
+              <option value="">Select a reason...</option>
+              <option>Request a Demo</option>
+              <option>Sales / Pricing Question</option>
+              <option>Technical Support</option>
+              <option>Enterprise Inquiry</option>
+              <option>Partnership Opportunity</option>
+              <option>General Question</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea placeholder="Tell us about your agency, your goals, or any questions you have..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" style="width:100%; justify-content:center;" id="submit-btn">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Info -->
+      <div>
+        <h2 style="font-size:24px; font-weight:800; margin-bottom:8px;">Other Ways to Reach Us</h2>
+        <p style="color:var(--gray); font-size:14px; margin-bottom:32px;">Choose the channel that works best for you.</p>
+        <ul class="contact-info">
+          <li>
+            <div class="contact-icon">📧</div>
+            <div>
+              <h4>Email Us</h4>
+              <p>hello@searchmarketingservices.com</p>
+              <p style="color:var(--purple); font-size:13px;">Response within 2 business hours</p>
+            </div>
+          </li>
+          <li>
+            <div class="contact-icon">💬</div>
+            <div>
+              <h4>Live Chat</h4>
+              <p>Available Mon–Fri, 9am–6pm EST</p>
+              <p style="color:var(--purple); font-size:13px;">Average response time: 3 minutes</p>
+            </div>
+          </li>
+          <li>
+            <div class="contact-icon">📅</div>
+            <div>
+              <h4>Book a Demo</h4>
+              <p>Schedule a personalized 30-min walkthrough</p>
+              <p style="color:var(--purple); font-size:13px; cursor:pointer; font-weight:600;">→ Book a time slot</p>
+            </div>
+          </li>
+          <li>
+            <div class="contact-icon">🏢</div>
+            <div>
+              <h4>Headquarters</h4>
+              <p>123 Marketing Ave, Suite 400</p>
+              <p>New York, NY 10001, USA</p>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Social -->
+        <div style="margin-top:32px; padding:28px; background:var(--purple-bg2); border-radius:16px;">
+          <h4 style="font-size:16px; font-weight:700; margin-bottom:16px;">Follow Us</h4>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <a href="#" style="display:flex; align-items:center; gap:8px; background:white; border-radius:8px; padding:8px 16px; font-size:13px; font-weight:600; color:var(--dark); border:1px solid var(--border);">LinkedIn</a>
+            <a href="#" style="display:flex; align-items:center; gap:8px; background:white; border-radius:8px; padding:8px 16px; font-size:13px; font-weight:600; color:var(--dark); border:1px solid var(--border);">Twitter / X</a>
+            <a href="#" style="display:flex; align-items:center; gap:8px; background:white; border-radius:8px; padding:8px 16px; font-size:13px; font-weight:600; color:var(--dark); border:1px solid var(--border);">YouTube</a>
+            <a href="#" style="display:flex; align-items:center; gap:8px; background:white; border-radius:8px; padding:8px 16px; font-size:13px; font-weight:600; color:var(--dark); border:1px solid var(--border);">Facebook</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ mini -->
+<section style="background:var(--light-gray);">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:48px;">
+      <span class="section-tag">Quick Answers</span>
+      <h2 class="section-title">Common Questions</h2>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:24px;">
+      <div style="background:white; border-radius:16px; padding:28px; border:1px solid var(--border);">
+        <h4 style="font-weight:700; margin-bottom:10px; font-size:15px;">How long is the free trial?</h4>
+        <p style="font-size:14px; color:var(--gray); line-height:1.7;">All plans include a 7-day free trial with full access. No credit card needed to start.</p>
+      </div>
+      <div style="background:white; border-radius:16px; padding:28px; border:1px solid var(--border);">
+        <h4 style="font-weight:700; margin-bottom:10px; font-size:15px;">Do you offer done-for-you services?</h4>
+        <p style="font-size:14px; color:var(--gray); line-height:1.7;">Yes. Our team offers full-service marketing implementation for agencies who need extra support.</p>
+      </div>
+      <div style="background:white; border-radius:16px; padding:28px; border:1px solid var(--border);">
+        <h4 style="font-weight:700; margin-bottom:10px; font-size:15px;">Can I white-label the platform?</h4>
+        <p style="font-size:14px; color:var(--gray); line-height:1.7;">Yes, on our Pro plan and above. Full custom branding, domain, and client-facing dashboard.</p>
+      </div>
+      <div style="background:white; border-radius:16px; padding:28px; border:1px solid var(--border);">
+        <h4 style="font-weight:700; margin-bottom:10px; font-size:15px;">Is there enterprise pricing?</h4>
+        <p style="font-size:14px; color:var(--gray); line-height:1.7;">Yes. Contact our sales team for custom enterprise pricing with dedicated support and SLA.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2>Ready to Get Started?</h2>
+    <p>Try Search Marketing Services free for 7 days. No credit card required.</p>
+    <a href="pricing.html" class="btn btn-white btn-xl">Start Free Trial</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand"><div class="logo">Search<span style="color:#9CA3AF">Marketing</span> Services</div><p>The world's first agentic marketing platform. Unifying SEO, Ads, Content, and AI Visibility in one powerful dashboard.</p></div>
+    <div class="footer-col"><h4>Platform</h4><ul><li><a href="features.html">All Features</a></li><li><a href="pricing.html">Pricing</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li><li><a href="#">Careers</a></li></ul></div>
+    <div class="footer-col"><h4>Resources</h4><ul><li><a href="#">Help Center</a></li><li><a href="#">Blog</a></li></ul></div>
+    <div class="footer-col"><h4>Legal</h4><ul><li><a href="#">Terms of Use</a></li><li><a href="#">Privacy Policy</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Search Marketing Services. All rights reserved.</p>
+    <div class="footer-social"><a href="#">in</a><a href="#">X</a><a href="#">f</a><a href="#">▶</a></div>
+  </div>
+</footer>
+
+<script>
+function submitForm(e) {
+  e.preventDefault();
+  const btn = document.getElementById('submit-btn');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+  setTimeout(() => {
+    window.location.href = 'thank-you.html';
+  }, 1200);
+}
+</script>
+</body>
+</html>
