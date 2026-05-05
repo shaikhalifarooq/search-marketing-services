@@ -5,8 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Search Marketing Services — Agentic SEO & AI Visibility</title>
   <link rel="stylesheet" href="style.css" />
+
+  <!-- ═══════════════════════════════════════════════════
+       GOOGLE TAG MANAGER — replace GTM-XXXXXXX with your ID
+  ════════════════════════════════════════════════════════ -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+
+  <!-- ═══════════════════════════════════════════════════
+       GOOGLE ADS + GA4 GLOBAL SITE TAG
+       Replace AW-18141674968 → Google Ads account ID
+       Replace G-XXXXXXXXXX  → GA4 Measurement ID
+  ════════════════════════════════════════════════════════ -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18141674968"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18141674968');  // Google Ads
+    gtag('config', 'G-XXXXXXXXXX');   // GA4
+  </script>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- Topbar -->
 <div class="topbar">
@@ -37,8 +63,8 @@
     <h1>Agentic SEO and AI Visibility <span>Start Here</span></h1>
     <p>Launch your full SEO & AI Search strategy in one conversation. Our AI agent runs thousands of tasks across 60+ tools — so you can focus on growing your business.</p>
     <div class="hero-btns">
-      <a href="pricing/" class="btn btn-primary btn-lg">Start Free Trial</a>
-      <a href="features/" class="btn btn-outline btn-lg">See All Features</a>
+      <a href="pricing/" class="btn btn-primary btn-lg" onclick="trackCTA('cta_click','Hero - Start Free Trial','pricing/')">Start Free Trial</a>
+      <a href="features/" class="btn btn-outline btn-lg" onclick="trackCTA('cta_click','Hero - See All Features','features/')">See All Features</a>
     </div>
     <div class="hero-stats">
       <div class="hero-stat"><strong>60+</strong><span>Marketing Tools</span></div>
@@ -107,7 +133,7 @@
       </div>
     </div>
     <div style="text-align:center; margin-top:40px;">
-      <a href="features/" class="btn btn-primary btn-lg">Explore All Features</a>
+      <a href="features/" class="btn btn-primary btn-lg" onclick="trackCTA('cta_click','Features Section - Explore All Features','features/')">Explore All Features</a>
     </div>
   </div>
 </section>
@@ -141,7 +167,7 @@
       </div>
     </div>
     <div style="text-align:center; margin-top:40px;">
-      <a href="about/" class="btn btn-outline btn-lg">See All Case Studies</a>
+      <a href="about/" class="btn btn-outline btn-lg" onclick="trackCTA('cta_click','Case Studies - See All','about/')">See All Case Studies</a>
     </div>
   </div>
 </section>
@@ -193,7 +219,7 @@
       </table>
     </div>
     <div style="text-align:center; margin-top:40px;">
-      <a href="pricing/" class="btn btn-primary btn-lg">See Pricing Plans</a>
+      <a href="pricing/" class="btn btn-primary btn-lg" onclick="trackCTA('cta_click','Value Section - See Pricing Plans','pricing/')">See Pricing Plans</a>
     </div>
   </div>
 </section>
@@ -285,7 +311,7 @@
   <div class="container">
     <h2>10x Your Agency Revenue with AI Marketing</h2>
     <p>Join 10,000+ businesses already using Search Marketing Services to dominate search and AI visibility.</p>
-    <a href="pricing/" class="btn btn-white btn-xl">Start for Free — 7 Days No Risk</a>
+    <a href="pricing/" class="btn btn-white btn-xl" onclick="trackCTA('cta_click','CTA Band - Start for Free','pricing/')">Start for Free — 7 Days No Risk</a>
   </div>
 </section>
 
@@ -349,6 +375,7 @@
   </div>
 </footer>
 
+<script src="tracking.js"></script>
 <script>
 function toggleFaq(btn) {
   const answer = btn.nextElementSibling;

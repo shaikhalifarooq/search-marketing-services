@@ -5,8 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact — Search Marketing Services</title>
   <link rel="stylesheet" href="../style.css" />
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+
+  <!-- Google Ads + GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18141674968"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18141674968');
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="topbar">🚀 Questions? Our team replies within 2 hours on business days</div>
 <nav>
@@ -183,14 +203,34 @@
   </div>
 </footer>
 
+<script src="../tracking.js"></script>
 <script>
 function submitForm(e) {
   e.preventDefault();
   const btn = document.getElementById('submit-btn');
   btn.textContent = 'Sending...';
   btn.disabled = true;
+
+  // Push form_submit event to dataLayer for GTM
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: 'form_submit',
+    form_name: 'contact_form',
+    page_path: window.location.pathname
+  });
+
+  // Fire Google Ads conversion
+  // Replace AW-18141674968/CONV_LABEL_FORM with your actual conversion action
+  if (typeof gtag === 'function') {
+    gtag('event', 'conversion', {
+      send_to: 'AW-18141674968/CONV_LABEL_FORM',
+      value: 1.0,
+      currency: 'USD'
+    });
+  }
+
   setTimeout(() => {
-    window.location.href = 'thank-you.html';
+    window.location.href = '../thank-you/';
   }, 1200);
 }
 </script>
