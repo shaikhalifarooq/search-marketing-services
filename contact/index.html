@@ -22,6 +22,24 @@
     gtag('config', 'AW-18141674968');
     gtag('config', 'G-XXXXXXXXXX');
   </script>
+
+  <!-- Event snippet for Submit lead form conversion -->
+  <script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+      'send_to': 'AW-18141674968/W1iBCK_M6accENj7z8pD',
+      'value': 1.0,
+      'currency': 'PKR',
+      'event_callback': callback
+    });
+    return false;
+  }
+  </script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -219,19 +237,8 @@ function submitForm(e) {
     page_path: window.location.pathname
   });
 
-  // Fire Google Ads conversion
-  // Replace AW-18141674968/CONV_LABEL_FORM with your actual conversion action
-  if (typeof gtag === 'function') {
-    gtag('event', 'conversion', {
-      send_to: 'AW-18141674968/CONV_LABEL_FORM',
-      value: 1.0,
-      currency: 'USD'
-    });
-  }
-
-  setTimeout(() => {
-    window.location.href = '../thank-you/';
-  }, 1200);
+  // Fire Google Ads conversion and redirect to thank-you on callback
+  gtag_report_conversion('../thank-you/');
 }
 </script>
 </body>
